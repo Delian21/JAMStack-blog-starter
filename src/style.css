@@ -68,6 +68,10 @@ ol:where([role="list"]) {
 }
 
 /* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -79,7 +83,7 @@ body {
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
+/* A element that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -115,9 +119,7 @@ select {
   }
 }
 
-/* //////////////////////
-  General styling
-  /////////////////////// */
+/* General styling */
 
 body {
   font-family: var(--ff-body);
@@ -144,9 +146,7 @@ section,
 
 
 
-/* //////////////////////
-  Utility Classes
-  /////////////////////// */
+/* Utility Classes */
 
 /* select all direct childen of .flow
    and add margin to the top for proper
@@ -176,7 +176,7 @@ section,
   text-align: center;
 }
 
-/* typgraphy */
+/* Typography */
 
 .article-title,
 .section-title {
@@ -192,9 +192,7 @@ section,
 }
 
 
-/* //////////////////////
-  Header
-  /////////////////////// */
+/* Header */
 
 .page-header {
   padding: 2em 0;
@@ -213,17 +211,19 @@ section,
 .nav-list a {
   color: var(--clr-neutral-900);
   text-decoration: none;
+  transition: .3s ease-in;
+  padding: 0.2rem 0.85rem;
 }
 
 .nav-list a:focus,
 .nav-list a:hover {
-  color: var(--clr-primary-400);
-  text-decoration: underline;
+  color: var(--clr-primary-200);
+  background-color: var(--clr-primary-400);
+  border-radius: 1rem;
+  padding: 0.35rem 0.9rem;
 }
 
-/* //////////////////////
-  Footer
-  /////////////////////// */
+/* Footer */
 
 .site-footer {
   --logo-color: currentColor;
@@ -233,9 +233,7 @@ section,
   text-align: center;
 }
 
-/* //////////////////////
-  Homepage
-  /////////////////////// */
+/* Homepage */
 
 .hero > div {
   display: grid;
@@ -266,9 +264,7 @@ section,
   margin: 6rem 0;
 }
 
-/* //////////////////////
-  Individual article page
-  /////////////////////// */
+/* Individual article page */
 
   .main-article {
     margin-bottom: 3rem;
@@ -280,9 +276,7 @@ section,
     opacity: .9;
   }
 
-/* //////////////////////
-  Article snippets
-  /////////////////////// */
+/* Article snippets */
 
 .snippet {
   display: grid;
@@ -325,6 +319,7 @@ section,
 .snippet__title a {
   color: inherit;
   text-decoration: none;
+  transition: .3s ease-in;
 }
 
 .snippet__title a:hover,
@@ -366,11 +361,13 @@ section,
   color: var(--clr-neutral-100);
   font-weight: var(--fw-700);
   border: 2px solid var(--clr-primary-400);
+  transition: .3s ease-in;
 }
 .btn--primary:hover,
 .btn--primary:focus {
   background: var(--clr-primary-500);
-  border-color: var(--clr-primary-500); 
+  border-color: var(--clr-primary-500);
+  border-radius: 1.5rem; 
 }
 
 .btn--neutral {
@@ -378,10 +375,12 @@ section,
   color: var(--clr-neutral-900);
   font-weight: var(--fw-700);
   border: 2px solid var(--clr-neutral-900);
+  transition: .3s ease-in;
 }
 
 .btn--neutral:hover,
 .btn--neutral:focus {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+  border-radius: 1.5rem; 
 }
